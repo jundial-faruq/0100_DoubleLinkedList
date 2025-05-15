@@ -26,6 +26,24 @@ public:
         int nim;
         cout << "\nEnter the roll number of the student: ";
         cin >> nim;
+
+        // step 1: Allocate memory for new node
+        Node *newNode = new Node();
+
+        // step 2: Assign value to the data field
+        newNode->noMhs = nim;
+
+        if (START == NULL || nim <= START->noMhs)
+        {
+            if (START != NULL && nim == START->noMhs)
+            {
+                cout << "\nDuplicate number not allowed" << endl;
+                return;
+            }
+            
+            
+        }
+        
     }
 }
 
