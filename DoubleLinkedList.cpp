@@ -73,7 +73,12 @@ public:
         // step 9: Insert between current  and current->next
         newNode->next = current->next; // Step 9a:newNode.next = current.next
         newNode->prev = current; // Step 9b: newNode.prev = current
-        
+
+        // Insert Last node
+        if (current->next != NULL)
+            current->next->prev = newNode; // step 9c: current.next = newNode
+
+            current->next = newNode; // step 9d: current.next = newNode
     }
 }
 
